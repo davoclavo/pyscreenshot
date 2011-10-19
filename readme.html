@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About &mdash; pyscreenshot 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pyscreenshot 0.2.1 documentation" href="index.html" />
+    <link rel="next" title="Backend performance" href="speed.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="speed.html" title="Backend performance"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">pyscreenshot 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">pyscreenshot</span></tt> module can be used to copy
+the contents of the screen to a <a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a> image memory or file.
+Replacement for the <a class="reference external" href="http://www.pythonware.com/library/pil/handbook/imagegrab.htm">ImageGrab</a> Module, which works on Windows only.</p>
+<dl class="docutils">
+<dt>Links:</dt>
+<dd><ul class="first last simple">
+<li>home: <a class="reference external" href="https://github.com/ponty/pyscreenshot">https://github.com/ponty/pyscreenshot</a></li>
+<li>documentation: <a class="reference external" href="http://ponty.github.com/pyscreenshot">http://ponty.github.com/pyscreenshot</a></li>
+</ul>
+</dd>
+<dt>Features:</dt>
+<dd><ul class="first last">
+<li><p class="first">Crossplatform wrapper</p>
+</li>
+<li><p class="first">Capturing the whole desktop</p>
+</li>
+<li><p class="first">Capturing an area</p>
+</li>
+<li><p class="first">saving to file or <a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a> image memory</p>
+</li>
+<li><p class="first">some backends are based on this discussion: <a class="reference external" href="http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux">http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux</a></p>
+</li>
+<li><dl class="first docutils">
+<dt>Plugin based, it has wrappers for various backends:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://linux.die.net/man/1/scrot">scrot</a></li>
+<li><a class="reference external" href="http://www.imagemagick.org/">ImageMagick</a></li>
+<li><a class="reference external" href="http://www.pygtk.org/">PyGTK</a></li>
+<li><a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a> (only on windows)</li>
+<li><a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt">PyQt4</a></li>
+<li><a class="reference external" href="http://www.wxpython.org/">wxPython</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Known problems:</dt>
+<dd><ul class="first last simple">
+<li>not implemented: Capturing an active window</li>
+<li>different backends generate slightly different images from the same desktop,
+this should be investigated</li>
+<li><a class="reference external" href="http://www.imagemagick.org/">ImageMagick</a> creates <a class="reference external" href="http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&amp;t=13658">blackbox</a> on some systems</li>
+<li><a class="reference external" href="http://www.pygtk.org/">PyGTK</a> backend does not check $DISPLAY -&gt; not working with Xvfb</li>
+<li>slow: 0.2s - 0.7s</li>
+</ul>
+</dd>
+<dt>Similar projects:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://sourceforge.net/projects/gtkshots/">http://sourceforge.net/projects/gtkshots/</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pyscreenshot</span> <span class="kn">as</span> <span class="nn">ImageGrab</span>
+
+<span class="c"># fullscreen</span>
+<span class="n">im</span><span class="o">=</span><span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab</span><span class="p">()</span>
+<span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c"># part of the screen</span>
+<span class="n">im</span><span class="o">=</span><span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab</span><span class="p">(</span><span class="n">bbox</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">))</span>
+<span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c"># to file</span>
+<span class="n">ImageGrab</span><span class="o">.</span><span class="n">grab_to_file</span><span class="p">(</span><span class="s">&#39;im.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>install <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">setuptools</a> or <a class="reference external" href="http://pip.openplans.org/">pip</a></li>
+<li>install <a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a></li>
+<li>install at least one backend</li>
+<li>install the program:</li>
+</ul>
+</div></blockquote>
+<p>if you have <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">setuptools</a> installed:</p>
+<div class="highlight-python"><pre># as root
+easy_install pyscreenshot</pre>
+</div>
+<p>if you have <a class="reference external" href="http://pip.openplans.org/">pip</a> installed:</p>
+<div class="highlight-python"><pre># as root
+pip install pyscreenshot</pre>
+</div>
+</div>
+<div class="section" id="ubuntu">
+<h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre># one or more
+sudo apt-get install scrot
+sudo apt-get install imagemagick
+sudo apt-get install python-gtk2
+sudo apt-get install python-qt4
+sudo apt-get install python-wxversion
+
+# Python Imaging Library (required)
+sudo apt-get install python-imaging
+
+sudo apt-get install python-setuptools
+sudo easy_install pyscreenshot</pre>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre># as root
+pip uninstall pyscreenshot</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Indices and tables</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="speed.html"
+                        title="next chapter">Backend performance</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/readme.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="speed.html" title="Backend performance"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Indices and tables"
+             >previous</a> |</li>
+        <li><a href="index.html">pyscreenshot 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+    </div>
+  </body>
+</html>
