@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Backend performance &mdash; pyscreenshot 0.2.1 documentation</title>
+    <title>Backend performance &mdash; pyscreenshot 0.2.2 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.2.1',
+        VERSION:     '0.2.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pyscreenshot 0.2.1 documentation" href="index.html" />
+    <link rel="top" title="pyscreenshot 0.2.2 documentation" href="index.html" />
     <link rel="next" title="command line help" href="help.html" />
     <link rel="prev" title="Examples" href="examples.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="examples.html" title="Examples"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">pyscreenshot 0.2.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">pyscreenshot 0.2.2 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,48 +57,44 @@
   <div class="section" id="backend-performance">
 <h1>Backend performance<a class="headerlink" href="#backend-performance" title="Permalink to this headline">¶</a></h1>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m pyscreenshot.check.speedtest
-/usr/lib/pymodules/python2.6/gtk-2.0/gtk/__init__.py:127: RuntimeWarning: PyOS_InputHook is not available for interactive use of PyGTK
-  set_interactive(1)
 
 n=10 , to_file: True , bounding box: None
 ------------------------------------------------------
-scrot                 1.8 sec
-imagemagick           7.7 sec
-pyqt                  1.9 sec
-pygtk                 2.7 sec
-wx                    2.3 sec
+imagemagick           6.5 sec
+pygtk                 2.8 sec
 pil                   Forced backend not found, or cannot be loaded:pil
+pyqt                  2.6 sec
+wx                    2.3 sec
+scrot                 2.2 sec
 
 n=10 , to_file: False , bounding box: None
 ------------------------------------------------------
-scrot                 1.8 sec
-imagemagick           7.7 sec
-pyqt                  1.4 sec
-pygtk                 2.7 sec
-wx                    0.5 sec
+imagemagick           6.5 sec
+pygtk                 2.3 sec
 pil                   Forced backend not found, or cannot be loaded:pil
+pyqt                  2.1 sec
+wx                    0.4 sec
+scrot                 2.0 sec
 
 n=10 , to_file: False , bounding box: (10, 10, 20, 20)
 ------------------------------------------------------
-scrot                 2.3 sec
-imagemagick           4.3 sec
-pyqt                  1.9 sec
-pygtk                 3.1 sec
-wx                    0.5 sec
+imagemagick           2.3 sec
+pygtk                 2.8 sec
 pil                   Forced backend not found, or cannot be loaded:pil
+pyqt                  2.6 sec
+wx                    0.5 sec
+scrot                 2.6 sec
 </pre></div>
 </div>
 <p>Test system versions:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m pyscreenshot.check.versions
-/usr/lib/pymodules/python2.6/gtk-2.0/gtk/__init__.py:127: RuntimeWarning: PyOS_InputHook is not available for interactive use of PyGTK
-  set_interactive(1)
-pyscreenshot          0.2.1
-scrot                 0.8
-imagemagick           6.6.2
-pyqt                  not implemented
-pygtk                 2.21.5
-wx                    2.8.11.0
+pyscreenshot          0.2.2
+imagemagick           6.6.0
+pygtk                 2.28.6
 pil                   missing
+pyqt                  not implemented
+wx                    2.8.11.0
+scrot                 0.8
 </pre></div>
 </div>
 </div>
@@ -152,12 +148,12 @@ pil                   missing
         <li class="right" >
           <a href="examples.html" title="Examples"
              >previous</a> |</li>
-        <li><a href="index.html">pyscreenshot 0.2.1 documentation</a> &raquo;</li> 
+        <li><a href="index.html">pyscreenshot 0.2.2 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>
