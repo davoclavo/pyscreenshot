@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="pyscreenshot 0.2.2 documentation" href="index.html" />
-    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="next" title="Hierarchy" href="struct.html" />
     <link rel="prev" title="Indices and tables" href="index.html" /> 
   </head>
   <body>
@@ -40,7 +40,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="examples.html" title="Examples"
+          <a href="struct.html" title="Hierarchy"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Indices and tables"
@@ -68,7 +68,7 @@ Replacement for the <a class="reference external" href="http://www.pythonware.co
 </dd>
 <dt>Features:</dt>
 <dd><ul class="first last">
-<li><p class="first">Crossplatform wrapper</p>
+<li><p class="first">Cross-platform wrapper</p>
 </li>
 <li><p class="first">Capturing the whole desktop</p>
 </li>
@@ -76,12 +76,14 @@ Replacement for the <a class="reference external" href="http://www.pythonware.co
 </li>
 <li><p class="first">saving to file or <a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a> image memory</p>
 </li>
-<li><p class="first">some backends are based on this discussion: <a class="reference external" href="http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux">http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux</a></p>
+<li><p class="first">some back-ends are based on this discussion: <a class="reference external" href="http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux">http://stackoverflow.com/questions/69645/take-a-screenshot-via-a-python-script-linux</a></p>
+</li>
+<li><p class="first">pure Python library</p>
 </li>
 <li><dl class="first docutils">
-<dt>Plugin based, it has wrappers for various backends:</dt>
+<dt>Plugin based, it has wrappers for various back-ends:</dt>
 <dd><ul class="first last simple">
-<li><a class="reference external" href="http://linux.die.net/man/1/scrot">scrot</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/Scrot">scrot</a></li>
 <li><a class="reference external" href="http://www.imagemagick.org/">ImageMagick</a></li>
 <li><a class="reference external" href="http://www.pygtk.org/">PyGTK</a></li>
 <li><a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a> (only on windows)</li>
@@ -96,10 +98,10 @@ Replacement for the <a class="reference external" href="http://www.pythonware.co
 <dt>Known problems:</dt>
 <dd><ul class="first last simple">
 <li>not implemented: Capturing an active window</li>
-<li>different backends generate slightly different images from the same desktop,
+<li>different back-ends generate slightly different images from the same desktop,
 this should be investigated</li>
 <li><a class="reference external" href="http://www.imagemagick.org/">ImageMagick</a> creates <a class="reference external" href="http://www.imagemagick.org/discourse-server/viewtopic.php?f=3&amp;t=13658">blackbox</a> on some systems</li>
-<li><a class="reference external" href="http://www.pygtk.org/">PyGTK</a> backend does not check $DISPLAY -&gt; not working with Xvfb</li>
+<li><a class="reference external" href="http://www.pygtk.org/">PyGTK</a> back-end does not check $DISPLAY -&gt; not working with Xvfb</li>
 <li>slow: 0.2s - 0.7s</li>
 </ul>
 </dd>
@@ -139,7 +141,7 @@ this should be investigated</li>
 </li>
 <li><p class="first">install <a class="reference external" href="http://www.pythonware.com/library/pil/">PIL</a></p>
 </li>
-<li><p class="first">install at least one backend</p>
+<li><p class="first">install at least one back-end</p>
 </li>
 <li><p class="first">install the program:</p>
 <div class="highlight-python"><pre># as root
@@ -195,8 +197,8 @@ pip uninstall pyscreenshot</pre>
   <p class="topless"><a href="index.html"
                         title="previous chapter">Indices and tables</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="examples.html"
-                        title="next chapter">Examples</a></p>
+  <p class="topless"><a href="struct.html"
+                        title="next chapter">Hierarchy</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/readme.txt"
@@ -229,7 +231,7 @@ pip uninstall pyscreenshot</pre>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="examples.html" title="Examples"
+          <a href="struct.html" title="Hierarchy"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Indices and tables"
