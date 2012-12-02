@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>back-end performance &mdash; pyscreenshot 0.2.2 documentation</title>
+    <title>back-end performance &mdash; pyscreenshot 0.3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.2.2',
+        VERSION:     '0.3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pyscreenshot 0.2.2 documentation" href="index.html" />
+    <link rel="top" title="pyscreenshot 0.3.0 documentation" href="index.html" />
     <link rel="next" title="command line help" href="help.html" />
     <link rel="prev" title="Examples" href="examples.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="examples.html" title="Examples"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">pyscreenshot 0.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">pyscreenshot 0.3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -60,41 +60,41 @@
 
 n=10 , to_file: True , bounding box: None
 ------------------------------------------------------
-imagemagick           7.6 sec
-pygtk                 3.5 sec
-pil                   Forced backend not found, or cannot be loaded:pil
-pyqt                  6.2 sec
-wx                    3.4 sec
-scrot                 2.7 sec
+pygtk                2.8  sec (  284 ms per call)
+imagemagick          4    sec (  401 ms per call)
+pil                  Forced backend not found, or cannot be loaded:pil
+pyqt                 1.5  sec (  154 ms per call)
+scrot                1.7  sec (  171 ms per call)
+wx                   2.5  sec (  245 ms per call)
 
 n=10 , to_file: False , bounding box: None
 ------------------------------------------------------
-imagemagick           7.2 sec
-pygtk                 2.3 sec
-pil                   Forced backend not found, or cannot be loaded:pil
-pyqt                  2.3 sec
-wx                    0.5 sec
-scrot                 2.3 sec
+pygtk                2.7  sec (  267 ms per call)
+imagemagick          3.9  sec (  390 ms per call)
+pil                  Forced backend not found, or cannot be loaded:pil
+pyqt                 1.4  sec (  138 ms per call)
+scrot                1.7  sec (  165 ms per call)
+wx                   1    sec (  102 ms per call)
 
 n=10 , to_file: False , bounding box: (10, 10, 20, 20)
 ------------------------------------------------------
-imagemagick           2.4 sec
-pygtk                 3.1 sec
-pil                   Forced backend not found, or cannot be loaded:pil
-pyqt                  2.6 sec
-wx                    0.6 sec
-scrot                 2.7 sec
+pygtk                3.1  sec (  314 ms per call)
+imagemagick          2.1  sec (  205 ms per call)
+pil                  Forced backend not found, or cannot be loaded:pil
+pyqt                 1.8  sec (  180 ms per call)
+scrot                2.1  sec (  210 ms per call)
+wx                   1    sec (  101 ms per call)
 </pre></div>
 </div>
 <p>Test system versions:</p>
 <div class="highlight-text"><div class="highlight"><pre>$ python -m pyscreenshot.check.versions
-pyscreenshot          0.2.2
-imagemagick           6.6.0
-pygtk                 2.28.6
+pyscreenshot          0.3.0
+pygtk                 missing
+imagemagick           6.6.9
 pil                   missing
 pyqt                  not implemented
-wx                    2.8.11.0
 scrot                 0.8
+wx                    2.8.12.1
 </pre></div>
 </div>
 </div>
@@ -148,12 +148,12 @@ scrot                 0.8
         <li class="right" >
           <a href="examples.html" title="Examples"
              >previous</a> |</li>
-        <li><a href="index.html">pyscreenshot 0.2.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">pyscreenshot 0.3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
 </html>
