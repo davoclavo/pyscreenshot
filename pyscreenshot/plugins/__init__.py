@@ -14,9 +14,9 @@ BACKENDS = [
     wxscreen.WxScreen,
     gtkpixbuf.GtkPixbufWrapper,
     qtgrabwindow.QtGrabWindow,
-    imagemagick.ImagemagickWrapper,
     mac_screencapture.ScreencaptureWrapper,
     mac_quartz.MacQuartzWrapper,
+    imagemagick.ImagemagickWrapper,
 ]
 
 default_preference = [x.name for x in BACKENDS]
